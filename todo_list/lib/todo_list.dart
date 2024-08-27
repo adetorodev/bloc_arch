@@ -12,7 +12,7 @@ class TodoList extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Todo List'),
       ),
-      body: BlocBuilder<TodoCubit, List<Todos>>(
+      body: BlocBuilder<TodoCubit, List<Todo>>(
         builder: (context, todos) {
           return ListView.builder(
               itemCount: todos.length,
@@ -20,7 +20,7 @@ class TodoList extends StatelessWidget {
                 final todo = todos[index];
                 return ListTile(
                   title: Text(todo.name),
-                  subtitle: Text(todo.createdAt as String),
+                  // subtitle: Text(todo.createdAt as String),
                 );
               });
         },

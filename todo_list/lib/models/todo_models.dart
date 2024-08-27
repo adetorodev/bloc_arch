@@ -1,7 +1,7 @@
-class Todos {
+class Todo {
   final String name;
   final DateTime createdAt;
-  Todos({
+  Todo({
     required this.name,
     required this.createdAt,
   });
